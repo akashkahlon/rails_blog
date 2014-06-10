@@ -9,4 +9,9 @@ RSpec.describe Article, :type => :model do
   context "association" do
     it { should have_many(:comments).dependent(:destroy)}
   end
+  context "attributes" do
+    it { should have_attribute(:title)}
+     it { should have_attribute(:text)}
+  end
+
 end
